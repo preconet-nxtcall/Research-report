@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNLISTED O’RENA – PRIVATE MARKET INTELLIGENCE TERMINAL</title>
+    <!-- Use institutional fonts: clean serif for headings to feel like a terminal/report, standard sans for body -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">UNLISTED O’RENA</div>
+                <div class="header-subtitle">PRIVATE MARKET INTELLIGENCE TERMINAL</div>
+                <div class="header-tagline">Websites inform. Terminals decide.</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="generator-section">
+                <form id="generate-form" class="generate-form">
+                    <div class="input-group">
+                        <label for="company_name" class="visually-hidden">Target Company</label>
+                        <input type="text" id="company_name" placeholder="Enter strictly unlisted target company"
+                            required>
+                        <button type="submit" id="generate-btn">
+                            <span class="btn-text">GENERATE RESEARCH REPORT</span>
+                            <div class="loader hidden" id="btn-loader"></div>
+                        </button>
+                    </div>
+
+                    <div id="loading-message" class="loading-message hidden">Generating institutional-grade research…
+                    </div>
+                    <div id="error-message" class="error-message hidden"></div>
+                </form>
+            </section>
+
+            <section id="result-section" class="result-section hidden">
+                <div class="result-actions">
+                    <span class="report-id-text">Target: <strong id="display-company-name"></strong></span>
+                    <div class="actions">
+                        <button id="download-pdf" class="btn-secondary">Download PDF</button>
+                        <button id="download-docx" class="btn-secondary">Download DOCX</button>
+                    </div>
+                </div>
+
+                <div class="report-container" id="report-container">
+                    <!-- Report content injected here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="disclaimer-banner">
+                <p><strong>DISCLAIMER:</strong> This terminal uses AI-simulated data for illustrative research only. It
+                    does not use real-time market data and is not investment advice.</p>
+            </div>
+            <div class="footer-contacts">
+                <p><strong>UNLISTED O’RENA – Where Opportunities Thrive in Private Markets</strong></p>
+                <p>10/2, Hungerford Street, Kolkata – 700017</p>
+                <p>+91 90513 87093 | +91 98310 21208</p>
+                <p>madhurr@unlistedorena.com | www.unlistedorena.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
